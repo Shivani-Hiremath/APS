@@ -4,11 +4,15 @@ using namespace std;
 int main()
 {
     string s1,s2;
-    cin>>s1>>s2;
+    cout<<"Enter first string: ";
+    //Scin.ignore(); 
+    getline(cin, s1); 
+    cout<<"Enter second string: ";
+    getline(cin, s2); 
     int n = s1.length(), m = s2.length();
     vector<vector<int>> dp(n+1,vector<int>(m+1,0));
 
-    //initilaization
+    //Initilaization
     for(int i=0;i<n;i++)
     dp[i][0]=i;
     for(int j=0;j<m;j++)
